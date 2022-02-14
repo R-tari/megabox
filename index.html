@@ -3122,6 +3122,8 @@
             </div>
         </footer>
     </section> 
+    <!-- 내가 직접 만든 함수 -->
+    <script src="./js/fn-vanilla.js"></script>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -3129,30 +3131,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- swiper Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js" integrity="sha512-+1MtN0rwSlEnZo0agG99mCQChlBtfe8hyHItwWtgiD33mWvaNVZkZB9yX2S92z5HgDg1+EcitjutZejbHUcZAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
+        benefitBanner01(); 
+        benefitBanner02();
+         
+
         if($.cookie('modal-popup') == 'no'){
             $('.modal-popup').css('display','none');
         }else{
             $('.modal-popup').css('display','block');
         }
 
-         // benefit random banner01
-         let acBanNum1 =Math.floor(Math.random()*4);
-        let acBan1 = document.querySelectorAll('.benefit-banner01 a');
-        for(let idx=0;idx<acBan1.length;idx++)
-        {
-            acBan1[idx].classList.remove('active');
-        }
-        acBan1[acBanNum1].classList.add('active');
+        
 
-        // benefit random banner02
-        let acIdx =Math.floor(Math.random()*3);
-        let acBan = document.querySelectorAll('.benefit-banner02 a');
-        for(let idx=0;idx<acBan.length;idx++)
-        {
-            acBan[idx].classList.remove('active');
-        }
-        acBan[acIdx].classList.add('active');
+        
         
         let expImg = $('.movie-exp img');
         let filmImg = $('.film img');
@@ -3334,143 +3327,79 @@
 
 
         // 모바일 이벤트
-        
-
-        // 로그인열기 
-        // $('#btn-ticket').click(function()
-        // {
-        //     let loginCfm=confirm('로그인이 필요한 서비스입니다\n로그인 할까요?');
-        //     let loginEl=$('.m-login')
-        //     if(loginCfm)
-        //     {
+        // jQuery
+        // 로그인폼 열기
+        // $('#btn-ticket').click(function(){            
+        //     let loginCfm = confirm('로그인이 필요한 서비스입니다\n로그인 할까요?');
+        //     let loginEl = $('.m-login');
+        //     if(loginCfm){
         //         mobileForm('hidden','block','scroll',loginEl)
-        //     }  
+        //     }
         // })
 
-        // // 로그인닫기 
-        // $('.btn-close-login').click(function()
-        // {
-        //     let loginEl=$('.m-login');
-        //     mobileForm('scoll','none','hidden',loginEl);
+        // 로그인폼 닫기
+        // $('.btn-close-login').click(function(){
+        //     let loginEl = $('.m-login');
+        //     mobileForm('scroll','none','hidden',loginEl);
+        // })       
+
+        // 네비게이션 열기
+        // $('.icon-m-burger').click(function(){
+        //     let navEl = $('.m-nav');
+        //     mobileForm('hidden','block','scroll',navEl);
         // })
 
-
-        // // 네비열기
-        // $('.icon-m-burger').click(function()
-        // {
-        //     let navEl=$('.m-nav');
-        //     mobileForm('hidden','block','scroll',navEl)
+        // 네비게이션 닫기
+        // $('.btn-close-nav').click(function(){
+        //     let navEl = $('.m-nav');
+        //     mobileForm('scroll','none','hidden',navEl);    
         // })
-
-        // // 네비닫기
-        // $('.btn-close-nav').click(function()
-        // {
-        //     let navEl=$('.m-nav');
-        //     mobileForm('scroll','none','hidden',navEl)
- 
-        // })
-
-       
         
 
-        // function mobileForm(bodyValue,tarValue01,tarValue02,target)
-        // {
+        // function mobileForm(bodyValue,tarValue01,tarValue02,target){
         //     $('body').css('overflow',bodyValue);
-        //     target.css(
-        //         {
-        //             'display':tarValue01,
-        //             'overflow-y':tarValue02
-        //         })
-        // }
-
-        // let btnLogin = document.getElementById('btn-ticket');
-        // let btnCloseLogin = document.querySelector('.btn-close-login')
-        // let btnNav = document.querySelector('.icon-m-burger');
-        // let btnCloseNav = document.querySelector('.btn-close-nav');
-
-        // btnLogin.onclick = loadLogin;
-        // btnCloseLogin.onclick = closeLogin;
-        // btnNav.onclick = loadNav;
-        // btnCloseNav.onclick = closeNav;
-
-        // function loadLogin(){
-        //     let logCfm = confirm('로그인 후 사용가능합니다.\n로그인 하시겠습니까?');
-        //     let mLogin = document.querySelector('.m-login');
-        //     if(logCfm){
-        //         mLogin.style.display='block';
-        //     }    
-        //     modalScr('hidden','scroll',mLogin);
-        // }
-        // function closeLogin(){
-        //     let mLogin = document.querySelector('.m-login');
-        //     mLogin.style.display='none';
-        //     modalScr('scroll','hidden',mLogin);
-        // }
-        // function loadNav(){
-        //     let mNav = document.querySelector('.m-nav');
-        //     mNav.style.display='block';
-        //     modalScr('hidden','scroll',mNav);
-        // }
-        // function closeNav(){
-        //     let mNav = document.querySelector('.m-nav');
-        //     mNav.style.display='none';
-        //     modalScr('scroll','hidden',mNav);
-        // }
-        // function modalScr(item01,item02,item03){
-        //     document.querySelector('body').style.overflow=item01;
-        //     item03.style.overflowY = item02;
+        //     target.css({
+        //         'display':tarValue01,
+        //         'overflow-y':tarValue02,
+        //     })
         // }
 
 
-        let bodyEl=document.querySelector('body');
-        let loginEl=document.querySelector('.m-login');
-        let navEl=document.querySelector('.m-nav');
 
-        let btnOpLog=document.querySelector('.icon-ticket');
-        let btnOpNav=document.querySelector('.icon-m-burger');
-        let btnClLog=document.querySelector('.btn-close-login');
-        let btnClNav=document.querySelector('.btn-close-nav');
+        // Vanilla JS
+
+        let bodyEl = document.querySelector('body');
+        let loginEl = document.querySelector('.m-login');
+        let navEl = document.querySelector('.m-nav');
         
-        // 로그인열기
-        btnOpLog.addEventListener('click',function()
-        {
-            let loginCfm=confirm('로그인이 필요한 서비스입니다.\n로그인하시겠습니까?');
-            if(loginCfm)
-            {
+        let btnOpLog = document.querySelector('.icon-ticket');
+        let btnOpNav = document.querySelector('.icon-m-burger');
+        let btnClLog = document.querySelector('.btn-close-login');
+        let btnClNav = document.querySelector('.btn-close-nav');
+        
+        // 로그인 오픈
+        btnOpLog.addEventListener('click',function(){
+            let loginCfm = confirm('로그인이 필요한 서비스입니다\n로그인으로 이동할까요?');
+            if(loginCfm){
                 mobileForm('hidden','block','scroll',loginEl);
-            }
-        }
-        )
-        // 로그인닫기
-        btnClLog.addEventListener('click',function()
-        {
-            mobileForm('scroll','none','hidden',loginEl);
-        })
+            }            
+        });
 
-        // 네비게이션열기
-        btnOpNav.addEventListener('click',function()
-        {
+        // 로그인 닫기
+        btnClLog.addEventListener('click',function(){
+            mobileForm('scroll','none','hidden',loginEl)
+        })
+            
+        // 내비게이션 오픈
+        btnOpNav.addEventListener('click',function(){
             mobileForm('hidden','block','scroll',navEl);
+        });
+
+        // 네비 닫기
+        btnClNav.addEventListener('click',function(){
+            mobileForm('scroll','none','hidden',navEl)
         })
-        // 네비게이션닫기
-        btnClNav.addEventListener('click',function()
-        {
-            mobileForm('scroll','none','hidden',navEl);
-        })
-
-
-
-
-        function mobileForm(bodyOver,tarDis,tarOver,target)
-        {
-            bodyEl.style.overflow=bodyOver;
-            target.style.display=tarDis;
-            target.style.overflowY=tarOver;
-        }
-
-        // document.querySelector('#btn-ticket').addEventListener('click',mobileForm('hidden','block','scroll',document.querySelector('.m-login')))
+        
     </script>
-</body>
-</html>
 </body>
 </html>

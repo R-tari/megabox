@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 각종메타 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1190">
+    <meta name="apple-mobile-web-app-title" content="MEGABOX">
+    <meta name="robots" content="index,nofollow">
+    <meta name="description" content="메가박스에서 놀라운 경험을 즐기세요">
 
+    <meta property="og:title" content="MEGABOX">
+    <meta property="og:url" content="https://r-tari.github.io/megabox/">
+    <meta property="og:image" content="https://github.com/R-tari/megabox/blob/main/images/logo.png?raw=true">
+    <meta property="og:description" content="메가박스에서 놀라운 경험을 즐기세요">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MEGABOX">
+    <meta name="twitter:url" content="https://r-tari.github.io/megabox/">
+    <meta name="twitter:image" content="https://github.com/R-tari/megabox/blob/main/images/logo.png?raw=true">
+    <meta name="twitter:description" content="메가박스에서 놀라운 경험을 즐기세요">
 
 
     <!-- favicon -->
@@ -300,13 +315,14 @@
             height:24px;
             background-image:url(./m-images/ico_m_feed.png);
         }
-        .icon-m-burger{
+        .icon-m-burger
+        {
             width:30px;
             height:30px;
             background-image:url(./m-images/ico-m-burger.png);
         }
 
-        .m-login,.m-nav{
+        .m-login{
             display:none;
             position:fixed;
             left:0;
@@ -317,6 +333,65 @@
             background-color:#fff;
             color:#666;
         }
+
+       .m-nav{
+            width:65%;
+            display:block;
+            visibility: hidden;
+            pointer-events:none;
+            position:fixed;
+            right:-65%;
+            top:0;
+            bottom:0; 
+            padding:0;
+            background-color:rgba(0,0,0,0.6);
+            color:#666;
+            transition:0.3s;
+        }
+        .m-nav ul{
+            width:100%;
+            height:100%;;
+            padding:30% 0;
+            display:flex;
+            flex-flow:column nowrap;
+            justify-content: space-around;
+        }
+        .m-nav ul li{
+            display:block;
+            height:10%;
+            color:#fff;
+            font-size:2em;
+            text-align:center;
+            line-height: 100%;
+        }
+        .btn-close-nav{
+            position:absolute;
+            right:30px;
+            top:30px;
+            width:30px;
+            height:30px;
+            overflow:hidden;
+            align-self:end;
+            margin-right:30px;
+            text-indent:99999px;
+            border:none;
+        }
+
+        .btn-close-nav::after,.btn-close-nav::before{
+            position:absolute;
+            content:'';
+            display:block;
+            width:30px;
+            height:3px;
+            background-color:#fff;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%) rotate(45deg);
+        }
+        .btn-close-nav::before{
+            transform:translate(-50%, -50%) rotate(-45deg);
+        }
+        
         .m-login h2{
             margin-bottom:40px;
             font-size:1.4em;
@@ -1501,10 +1576,20 @@
                 <div class="btn-close-login"></div>
             </div>
             <div class="container m-nav">
-                모바일 내비게이션
-                <div class="btn-close-nav">
+                <span class="btn-close-nav">
                     닫기
-                </div>
+                </span>
+                <ul>
+                   
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">예매</a></li>
+                    <li><a href="#">극장</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">혜택</a></li>
+
+                </ul>
+
             </div>
         </header>
 
@@ -3392,12 +3477,17 @@
             
         // 내비게이션 오픈
         btnOpNav.addEventListener('click',function(){
-            mobileForm('hidden','block','scroll',navEl);
+            navEl.style.right="0";
+            navEl.style.visibility="visible";
+            navEl.style.pointerEvents="auto"
         });
 
         // 네비 닫기
         btnClNav.addEventListener('click',function(){
-            mobileForm('scroll','none','hidden',navEl)
+            navEl.style.right="-65%";
+            navEl.style.visibility="hidden";
+            navEl.style.pointerEvents="none"
+            
         })
         
     </script>

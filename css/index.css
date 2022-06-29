@@ -272,18 +272,18 @@ h1 span{
 .icon-ticket{
     width:30px;
     height:30px;
-    background-image:url(./m-images/ico-m-ticket.png);
+    background-image:url(../m-images/ico-m-ticket.png);
 }
 .icon-m-feed{
     width:51px;
     height:24px;
-    background-image:url(./m-images/ico_m_feed.png);
+    background-image:url(../m-images/ico_m_feed.png);
 }
 .icon-m-burger
 {
     width:30px;
     height:30px;
-    background-image:url(./m-images/ico-m-burger.png);
+    background-image:url(../m-images/ico-m-burger.png);
 }
 
 .m-login{
@@ -428,7 +428,7 @@ h1 span{
     width:14px;
     height:14px;
     margin-top:-3px;
-    background-image:url(./m-images/ico-m-check.png);
+    background-image:url(../m-images/ico-m-check.png);
     background-size:auto 100%;
 }
 input[type="checkbox"]:checked + .save-id .m-ico-check{
@@ -439,13 +439,13 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     height:50px;
 }
 .m-ico-facebook{
-    background-image:url(./m-images/ico-m-facebook.png);
+    background-image:url(../m-images/ico-m-facebook.png);
 }
 .m-ico-naver{
-    background-image:url(./m-images/ico-m-naver.png);
+    background-image:url(../m-images/ico-m-naver.png);
 }
 .m-ico-kakao{
-    background-image:url(./m-images/ico-m-kakao.png);
+    background-image:url(../m-images/ico-m-kakao.png);
 }
 .m-ico-paico{
     background-image:url(./m-images/ico-m-payco.png);
@@ -529,7 +529,7 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     right:0;
     top:0;
     bottom:0;
-    background:url('/images/patten.png') repeat left top;
+    background:url('../images/patten.png') repeat left top;
     opacity:0.1;
 }
 .movie-list .container{
@@ -1010,22 +1010,22 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     background-size:contain;            
 }
 .bg-mega01 a{
-    background-image:url(./images/ico-megainfo01.png);
+    background-image:url(../images/ico-megainfo01.png);
 }
 .bg-mega02 a{
-    background-image:url(./images/ico-megainfo02.png);
+    background-image:url(../images/ico-megainfo02.png);
 }
 .bg-mega03 a{
-    background-image:url(./images/ico-megainfo03.png);
+    background-image:url(../images/ico-megainfo03.png);
 }
 .bg-mega04 a{
-    background-image:url(./images/ico-megainfo04.png);
+    background-image:url(../images/ico-megainfo04.png);
 }
 .bg-mega05 a{
-    background-image:url(./images/ico-megainfo05.png);
+    background-image:url(../images/ico-megainfo05.png);
 }
 .bg-mega06 a{
-    background-image:url(./images/ico-megainfo06.png);
+    background-image:url(../images/ico-megainfo06.png);
 }
 .megainfo-nav ul li p{
     text-align:center;
@@ -1066,19 +1066,19 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     height:40px;
 }
 .m-ico-home{
-    background-image:url(./m-images/bnb-home-on.png);
+    background-image:url(../m-images/bnb-home-on.png);
 }
 .m-ico-store{
-    background-image:url(./m-images/bnb-store_new.png);
+    background-image:url(../m-images/bnb-store_new.png);
 }
 .m-ico-reserve{
-    background-image:url(./m-images/bnb-reserve_new.png);
+    background-image:url(../m-images/bnb-reserve_new.png);
 }
 .m-ico-event{
-    background-image:url(./m-images/bnb-event_new.png);
+    background-image:url(../m-images/bnb-event_new.png);
 }
 .m-ico-mymega{
-    background-image:url(./m-images/bnb-mymega_new.png);
+    background-image:url(../m-images/bnb-mymega_new.png);
 }
 
 
